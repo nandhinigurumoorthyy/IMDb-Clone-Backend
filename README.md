@@ -6,7 +6,9 @@ This is the backend of the **Movie Explorer** web application, providing API end
 
 ## 🚀 Demo
 
-🌐 **Backend** (Server-side): [Backend API](https://your-backend-api-link.com)
+🌐 **Frontend** (Client-side): [View Demo](https://your-frontend-demo-link.com)
+
+🌐 **Frontend** (Client-side): [Frontend API](https://github.com/nandhinigurumoorthyy/IMDb-Clone-Frontend.git)
 
 ---
 
@@ -167,7 +169,7 @@ To allow the frontend to communicate with the backend, **CORS** is enabled on th
 
 # 📖 License
 
-MIT License © [Your Name](https://github.com/your-username)
+MIT License © [Nandhini](https://github.com/nandhinigurumoorthyy)
 
 ---
 
