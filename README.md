@@ -6,7 +6,7 @@ This is the backend of the **Movie Explorer** web application, providing API end
 
 ## 🚀 Demo
 
-🌐 **Frontend** (Client-side): [View Demo](https://your-frontend-demo-link.com)
+🌐 **Frontend** (Client-side): [View Demo](https://imdb-clone-ui.netlify.app/)
 
 🌐 **Frontend** (Client-side): [Frontend API](https://github.com/nandhinigurumoorthyy/IMDb-Clone-Frontend.git)
 
