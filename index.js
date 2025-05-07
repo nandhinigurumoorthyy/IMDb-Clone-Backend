@@ -15,7 +15,7 @@ const Movie = require("./model/movie.model");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://0.0.0.0:10000"],
+    origin: ["http://localhost:5173", "http://0.0.0.0:10000", "https://imdb-clone-ui.netlify.app/"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -56,7 +56,7 @@ app.post("/reg", async (req, res) => {
 });
 
 // API Route for login
-app.post("/login", async (req, res) => {
+app.post("/", async (req, res) => {
   const { email, password } = req.body;
 
   try {
