@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const movieSchema = new mongoose.Schema({
   title: String,
+  lang:String,
   releaseDate: {type: Date},
   genre:String,
   overview: String,

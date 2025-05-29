@@ -109,6 +109,7 @@ app.post("/createnewmovie", async (req, res) => {
       producers,
       userId,
       photolink,
+      lang,
       vote,
     } = req.body;
 
@@ -120,6 +121,7 @@ app.post("/createnewmovie", async (req, res) => {
       overview,
       actors,
       producers,
+      lang,
       userId,
       photolink,
       vote,
@@ -149,6 +151,8 @@ app.get("/movies", async (req, res) => {
         { actors: { $regex: query, $options: "i" } },
         { producers: { $regex: query, $options: "i" } },
         { genre: { $regex: query, $options: "i" } },
+          { vote: { $regex: query, $options: "i" } },
+          { lang: { $regex: query, $options: "i" } },
         // Add more fields to search as needed
       ];
     }
