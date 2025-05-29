@@ -144,16 +144,17 @@ app.get("/movies", async (req, res) => {
     const filters = {};
 
     if (query) {
+      const regex = new RegExp(query, 'i');
+      const parsedVote = parseFloat(query);
       filters.$or = [
-        { title: { $regex: query, $options: "i" } },
-        { original_title: { $regex: query, $options: "i" } }, // Assuming you might have this field
-        { overview: { $regex: query, $options: "i" } },
-        { actors: { $regex: query, $options: "i" } },
-        { producers: { $regex: query, $options: "i" } },
-        { genre: { $regex: query, $options: "i" } },
-          { vote: { $regex: query, $options: "i" } },
-          { lang: { $regex: query, $options: "i" } },
-        // Add more fields to search as needed
+        { title: regex },
+        { original_title: regex },
+        { overview: regex },
+        { actors: regex },
+        { producers: regex },
+        { genre: regex },
+        { lang: regex },
+        ...(isNaN(parsedVote) ? [] : [{ vote: parsedVote }]) // Only include vote filter if query is a number
       ];
     }
 
